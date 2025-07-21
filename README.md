@@ -1,0 +1,55 @@
+Robotik Kol Araba Sistemini Çalıştırma Yol Haritası
+1. Hazırlık
+Donanım
+Malzeme Listesi'nde (BOM) listelenen tüm bileşenleri toplayın.
+Çalışma alanınızı uygun aletlerle (tornavida, kablo sıyırıcı vb.) hazırlayın.
+Şarjlı bir LiPo piliniz ve güvenli bir şarj alanınız olduğundan emin olun.
+Yazılım
+Arduino IDE'sini bilgisayarınıza kurun.
+Gerekli tüm kütüphaneleri (Servo, BluetoothSerial vb.) indirin.
+robot_main_modular.ino ve remote_main_modular.ino dosyalarının en son sürümlerini edinin.
+2. Montaj
+Belgelerinizdeki Montaj ve Kablolama Kılavuzu'nu izleyin.
+Şasiyi monte edin, motorları, servoları, sensörleri ve elektronik aksamı monte edin.
+Tüm kabloları, özellikle güç ve topraklama bağlantılarını iki kez kontrol edin.
+Aküyü sabitleyin ve tüm hareketli parçalarda boşluk olduğundan emin olun.
+3. Programlama
+Robot Deneyap Kartı:
+USB ile bilgisayarınıza bağlayın.
+Arduino IDE'de robot_main_modular.ino dosyasını açın.
+Doğru kartı ve portu seçin.
+Kodu yükleyin.
+Uzak Deneyap Kartı:
+Bilgisayarınıza bağlayın.
+Arduino IDE'de remote_main_modular.ino dosyasını açın.
+Doğru kartı ve portu seçin.
+Kodu yükleyin.
+4. İlk Çalıştırma ve Test
+Her iki Deneyap Kartını da (robot ve uzaktan kumanda) çalıştırın.
+Yanlış kablolama belirtileri (duman, ısı, garip sesler) olup olmadığını kontrol edin.
+Robot, bir komut alana kadar hareketsiz kalmalıdır.
+5. Bluetooth Eşleştirme
+Her iki Bluetooth modülünün de (veya ESP32 yerleşik Bluetooth'unun) güç aldığından emin olun.
+Uzaktan kumandayı ve robot modüllerini eşleştirin (Bluetooth modülünüzün eşleştirme talimatlarına bakın).
+Uzaktan kumandanın robota komut gönderebildiğini doğrulayın (hareket komutlarıyla test edin).
+6. Sistemin Çalışması
+Robotun hareketini kontrol etmek için uzaktan kumandadaki joystick ve düğmeleri kullanın.
+Tüm yönleri (ileri, geri, sol, sağ, dur) test edin.
+Uygulandıysa, kol kontrol komutlarını (pençeyi açma/kapama, kolu kaldırma/indirme, tabanı döndürme) test edin.
+Robotun tepkisini gözlemleyin ve düzgün çalışıp çalışmadığını kontrol edin.
+7. Güvenlik ve İzleme
+Pil voltajını izleyin (voltaj çok düşükse robot durur).
+İletişim kesilirse, robot otomatik olarak durmalıdır.
+Robotu, özellikle şarj sırasında, güç açıkken asla gözetimsiz bırakmayın.
+8. Gelişmiş Özellikler (İsteğe Bağlı)
+Otonom modları etkinleştirin ve test edin (örneğin, engelden kaçınma, top alma).
+Durum geri bildirimi (pil, hatalar vb.) için uzaktan kumandadaki OLED ekranı kullanın.
+Daha karmaşık işlemler için komut setini genişletin.
+9. Sorun Giderme
+Robot hareket etmiyorsa, kabloları, kod yüklemeyi ve Bluetooth eşleştirmesini kontrol edin.
+Servolar veya motorlar düzensiz çalışıyorsa, güç kaynağını ve bağlantıları kontrol edin.
+Yaygın sorunlar için belgelerinizdeki Sorun Giderme bölümüne bakın.
+10. Bakım ve Yükseltmeler
+Tüm bağlantıları ve hareketli parçaları aşınma veya gevşeme açısından düzenli olarak kontrol edin.
+Yeni özellikler veya hata düzeltmeleri yayınlandıkça yazılımı güncelleyin.
+Gelecekte başvurmak üzere değişiklikleri veya özelleştirmeleri belgelendirin.
